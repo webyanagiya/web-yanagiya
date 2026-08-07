@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全国営業パートナー募集｜WEB工房柳屋</title>
+  <meta name="description" content="WEB工房柳屋では全国の営業パートナーを募集しています。初期費用0円・在庫なし・ノルマなし。ホームページ制作をご紹介いただき、契約・入金確認後、制作し公開完了後に1件5,000円の紹介報酬をお支払いします。">
+  <style>
+    :root{
+      --main:#0f2a44;
+      --accent:#f39800;
+      --green:#2f8f5b;
+      --bg:#f7f4ef;
+      --text:#222;
+      --muted:#666;
+      --white:#fff;
+      --shadow:0 18px 45px rgba(15,42,68,.14);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.8;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:20;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 18px rgba(0,0,0,.06);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;gap:20px;
+    }
+    .logo{
+      display:flex;align-items:center;gap:12px;
+      font-weight:900;color:var(--main);
+    }
+    .logo-mark{
+      width:48px;height:48px;border:3px solid var(--main);
+      border-radius:50%;display:grid;place-items:center;
+      font-size:24px;background:#fff;
+    }
+    .logo small{
+      display:block;font-size:11px;letter-spacing:.12em;
+      color:var(--muted);font-weight:700;
+    }
+    .menu{display:flex;gap:20px;font-size:14px;font-weight:700}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:8px;background:var(--accent);color:#fff;
+      padding:13px 22px;border-radius:999px;font-weight:900;
+      border:none;box-shadow:0 10px 22px rgba(243,152,0,.28);
+    }
+    .btn.dark{background:var(--main);box-shadow:none}
+    .hero{
+      padding:88px 0 76px;
+      background:
+        radial-gradient(circle at 85% 20%,rgba(243,152,0,.20),transparent 28%),
+        linear-gradient(135deg,#f8fafc,#fff6e7);
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.12fr .88fr;
+      gap:42px;align-items:center;
+    }
+    .badge{
+      display:inline-block;background:#fff0d8;color:#9a5600;
+      border:1px solid #ffd59a;border-radius:999px;
+      padding:7px 15px;font-weight:900;
+    }
+    h1{
+      font-size:clamp(40px,6vw,70px);
+      line-height:1.12;margin:18px 0;color:var(--main);
+      letter-spacing:.01em;
+    }
+    h1 span{color:var(--accent)}
+    .lead{font-size:19px;font-weight:700;color:#374151}
+    .hero-points{
+      display:flex;gap:12px;flex-wrap:wrap;margin:26px 0;
+    }
+    .point{
+      background:#fff;border:1px solid #eee;border-radius:16px;
+      padding:12px 16px;font-weight:900;color:var(--main);
+      box-shadow:0 8px 24px rgba(15,42,68,.08);
+    }
+    .reward-box{
+      background:var(--main);color:#fff;border-radius:28px;
+      padding:38px;box-shadow:var(--shadow);
+    }
+    .reward-box .small{font-size:14px;opacity:.8;font-weight:700}
+    .reward-box .reward{
+      font-size:64px;font-weight:1000;color:#ffb02e;line-height:1.05;
+      margin:8px 0;
+    }
+    .reward-box .reward span{font-size:26px;color:#fff}
+    section{padding:76px 0}
+    .bg{background:var(--bg)}
+    .section-title{text-align:center;margin-bottom:38px}
+    .section-title h2{
+      margin:0;color:var(--main);font-size:clamp(30px,4vw,42px);
+    }
+    .section-title p{color:var(--muted);font-weight:700;margin-top:8px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:#fff;border:1px solid #ececec;border-radius:var(--radius);
+      padding:28px;box-shadow:0 8px 28px rgba(0,0,0,.05);
+    }
+    .icon{font-size:34px}
+    .card h3{color:var(--main);margin:10px 0 6px}
+    .product{
+      max-width:760px;margin:auto;border:2px solid var(--accent);
+      position:relative;padding:36px;
+    }
+    .product-price{
+      font-size:46px;font-weight:1000;color:var(--main);margin:8px 0 0;
+    }
+    .product-price small{font-size:16px}
+    .tax{font-weight:900;color:#666;margin-top:-6px}
+    ul{padding-left:1.2em}
+    li{margin:7px 0}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .flow .card strong{font-size:24px;color:var(--accent)}
+    .faq{
+      max-width:880px;margin:auto;display:grid;gap:14px;
+    }
+    details{
+      background:#fff;border:1px solid #e8e8e8;border-radius:16px;
+      padding:18px 20px;
+    }
+    summary{
+      cursor:pointer;font-weight:900;color:var(--main);
+    }
+    .notice{
+      max-width:880px;margin:0 auto;background:#fff8ea;
+      border:1px solid #ffd79a;border-radius:18px;padding:22px;
+      color:#69450d;
+    }
+    .cta{
+      background:linear-gradient(135deg,#071e34,#0f2a44);
+      color:#fff;text-align:center;
+    }
+    .cta h2{font-size:clamp(32px,5vw,48px);margin:0 0 8px}
+    .cta p{font-size:18px}
+    .cta .btn{margin-top:14px;font-size:17px;padding:15px 28px}
+    footer{background:#061725;color:#fff;padding:34px 0 20px}
+    .footer-inner{
+      display:flex;justify-content:space-between;align-items:center;
+      gap:20px;flex-wrap:wrap;
+    }
+    .note{font-size:13px;color:#ccc}
+    .fixed-cta{position:fixed;right:18px;bottom:18px;z-index:15}
+    @media(max-width:900px){
+      .menu{display:none}
+      .hero-grid,.grid-4,.grid-3,.flow{grid-template-columns:1fr}
+      .hero{padding:62px 0}
+      .reward-box .reward{font-size:52px}
+      section{padding:56px 0}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">柳</div>
+      <div>WEB工房柳屋<small>WEB STUDIO YANAGIYA</small></div>
+    </a>
+    <nav class="menu">
+      <a href="#about">制度について</a>
+      <a href="#product">商品</a>
+      <a href="#flow">報酬の流れ</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a class="btn" href="https://www.instagram.com/web.yanagiya/" target="_blank" rel="noopener">DMで応募</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">全国営業パートナー募集中</span>
+      <h1>あなたの<span>営業力</span>を、<br>副収入に。</h1>
+      <p class="lead">
+        WEB工房柳屋のホームページ制作サービスをご紹介・販売していただける
+        営業パートナーを全国から募集しています。
+      </p>
+      <div class="hero-points">
+        <div class="point">初期費用 0円</div>
+        <div class="point">在庫なし</div>
+        <div class="point">ノルマなし</div>
+        <div class="point">全国対応</div>
+      </div>
+      <a class="btn dark" href="https://www.instagram.com/web.yanagiya/" target="_blank" rel="noopener">
+        InstagramのDMで応募する →
+      </a>
+    </div>
+
+    <div class="reward-box">
+      <div class="small">契約・入金確認後、制作・公開完了後</div>
+      <div class="reward">5,000<span>円／1件</span></div>
+      <p>
+        お客様をご紹介いただき、WEB工房柳屋への契約・入金を確認し、
+        ホームページの制作・公開完了後に、1件につき5,000円の紹介報酬をお支払いします。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>営業パートナー制度</h2>
+      <p>ホームページ制作の専門知識や在庫は必要ありません。</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>初期費用0円</h3>
+        <p>登録料・加盟金・月額費用はありません。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>在庫なし</h3>
+        <p>デジタルサービスなので商品を仕入れる必要はありません。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>ノルマなし</h3>
+        <p>ご自身のペースで紹介・営業活動をしていただけます。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🗾</div>
+        <h3>全国対応</h3>
+        <p>地域を問わず、日本全国から活動していただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>こんな方を募集しています</h2>
+      <p>本業・副業を問わず、営業経験や人脈を活かせます。</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>営業職の方</h3>
+        <p>保険、不動産、自動車、建設、広告など業種は問いません。</p>
+      </div>
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3>副業を探している方</h3>
+        <p>勤務先の副業規定を確認のうえ、ご自身のペースで活動できます。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>SNS・人脈を活かしたい方</h3>
+        <p>対面だけでなく、LINE・メール・Instagramなどでの紹介も可能です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="product">
+  <div class="container">
+    <div class="section-title">
+      <h2>紹介していただく商品</h2>
+      <p>WEB工房柳屋の1ページ型ホームページ制作サービスです。</p>
+    </div>
+
+    <div class="card product">
+      <h3>ホームページ制作プラン</h3>
+      <div class="product-price">25,000円 <small>（税別）</small></div>
+      <div class="tax">税込 27,500円</div>
+
+      <ul>
+        <li>1ページ型ホームページ制作</li>
+        <li>スマートフォン対応</li>
+        <li>お問い合わせ導線</li>
+        <li>基本SEO対策</li>
+        <li>Instagram連携</li>
+        <li>Googleマップ設置</li>
+        <li>インターネット公開まで対応</li>
+      </ul>
+
+      <p>
+        詳しい制作内容の確認、制作、公開作業はWEB工房柳屋が担当します。
+      </p>
+
+      <a class="btn dark" href="index.html">お客様向けサイトを見る →</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg" id="flow">
+  <div class="container">
+    <div class="section-title">
+      <h2>紹介から報酬までの流れ</h2>
+      <p>営業パートナーは「紹介・販売」に集中できます。</p>
+    </div>
+
+    <div class="flow">
+      <div class="card">
+        <strong>01</strong>
+        <h3>お客様へ紹介</h3>
+        <p>ホームページを必要としている店舗・会社・個人事業主などにご案内します。</p>
+      </div>
+      <div class="card">
+        <strong>02</strong>
+        <h3>WEB工房柳屋へ</h3>
+        <p>興味を持っていただいたお客様をWEB工房柳屋へつないでください。</p>
+      </div>
+      <div class="card">
+        <strong>03</strong>
+        <h3>契約・入金・制作</h3>
+        <p>お客様が制作内容を確認してお支払い後、WEB工房柳屋がホームページを制作します。</p>
+      </div>
+      <div class="card">
+        <strong>04</strong>
+        <h3>報酬お支払い</h3>
+        <p>契約・入金確認後、制作し公開完了後、営業パートナーへ1件5,000円をお支払いします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>紹介方法</h2>
+      <p>難しい営業方法を指定するものではありません。</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">🗣️</div>
+        <h3>対面で紹介</h3>
+        <p>
+          「ホームページをまだお持ちでなければ、25,000円（税別）で制作しているWEB工房があります」
+          とご紹介ください。
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>LINE・DMで紹介</h3>
+        <p>WEB工房柳屋のサイトURLを送り、サービス内容をご案内いただけます。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📞</div>
+        <h3>電話・営業先で紹介</h3>
+        <p>興味を持っていただけた段階でWEB工房柳屋へ引き継いでいただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg" id="faq">
+  <div class="container">
+    <div class="section-title">
+      <h2>よくある質問</h2>
+      <p>営業パートナー登録前によくある内容です。</p>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>営業パートナーになるために費用はかかりますか？</summary>
+        <p>いいえ。登録料、加盟金、月額費用などはありません。</p>
+      </details>
+      <details>
+        <summary>ノルマはありますか？</summary>
+        <p>ありません。ご自身のペースで活動していただけます。</p>
+      </details>
+      <details>
+        <summary>ホームページ制作の知識がなくても大丈夫ですか？</summary>
+        <p>大丈夫です。詳しい制作内容の確認や制作作業はWEB工房柳屋が担当します。</p>
+      </details>
+      <details>
+        <summary>会社員でもできますか？</summary>
+        <p>可能です。ただし勤務先の副業規定についてはご自身でご確認ください。</p>
+      </details>
+      <details>
+        <summary>紹介しただけで報酬は発生しますか？</summary>
+        <p>紹介のみでは発生しません。お客様の契約・入金を確認し、ホームページの制作・公開が完了した場合に報酬が発生します。</p>
+      </details>
+      <details>
+        <summary>報酬はいくらですか？</summary>
+        <p>1件につき5,000円です。</p>
+      </details>
+      <details>
+        <summary>営業エリアに制限はありますか？</summary>
+        <p>ありません。日本全国で活動していただけます。</p>
+      </details>
+      <details>
+        <summary>お客様との制作打ち合わせは誰がしますか？</summary>
+        <p>WEB工房柳屋が対応します。営業パートナーは紹介・販売に集中していただけます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="notice">
+      <strong>成約実績について</strong><br>
+      全国営業パートナー制度は新しく開始する制度です。
+      現在は初期メンバーを募集しており、営業パートナー経由の成約実績は、
+      実績ができ次第掲載していきます。
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>全国営業パートナー募集中</h2>
+    <p>
+      初期費用0円・在庫なし・ノルマなし。<br>
+      営業経験や人脈を活かして、WEB工房柳屋の商品をご紹介ください。
+    </p>
+    <strong style="font-size:26px;color:#ffb02e;">1件につき 5,000円</strong><br>
+    <a class="btn" href="https://www.instagram.com/web.yanagiya/" target="_blank" rel="noopener">
+      InstagramのDMで応募する
+    </a>
+    <p class="note">DMに「営業パートナー希望」とお送りください。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="logo" style="color:#fff">
+      <div class="logo-mark">柳</div>
+      <div>WEB工房柳屋<small style="color:#ccc">WEB STUDIO YANAGIYA</small></div>
+    </div>
+    <div class="note">© 2026 WEB工房柳屋 All Rights Reserved.</div>
+  </div>
+</footer>
+
+<div class="fixed-cta">
+  <a class="btn" href="https://www.instagram.com/web.yanagiya/" target="_blank" rel="noopener">DMで応募</a>
+</div>
+
+</body>
+</html>
